@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(35, 35, 48);
+    font-family: 'Roboto Mono', monospace;
+}
