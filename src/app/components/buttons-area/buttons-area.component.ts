@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { faPowerOff, faToggleOn } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-buttons-area',
@@ -7,11 +6,15 @@ import { faPowerOff, faToggleOn } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./buttons-area.component.css']
 })
 export class ButtonsAreaComponent implements OnInit {
-  faIcon = faPowerOff;
+  @Output() btnClick = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onButtonClick(text:any){
+    this.btnClick.emit(text);
   }
 
 }

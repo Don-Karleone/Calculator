@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-result',
@@ -6,11 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-  text!:string;
+  @Input() text?: string;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clearResult() {
+    this.text = '';
+    console.log("result.component.clearResult()");
+  }
+  addValues() {
+    ;
+  }
+  substractValues() {
+    ;
   }
 
 }

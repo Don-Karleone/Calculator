@@ -1,4 +1,4 @@
-<div class = "container">
-  <app-result></app-result>
-  <app-buttons-area></app-buttons-area>
+<div class="container" >
+  <app-result text = {{result}}></app-result>
+  <app-buttons-area (btnClick)="changeResult($event)"></app-buttons-area>
 </div>
