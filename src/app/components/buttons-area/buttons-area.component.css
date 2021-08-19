@@ -2,7 +2,6 @@
     display: grid;
     row-gap: 5px;
     column-gap: 5px;
-    margin-top: 50px;
     aspect-ratio: 0.8;
 }
 

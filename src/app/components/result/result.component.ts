@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Input } from '@angular/core';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-result',
@@ -6,22 +7,14 @@ import { Component, OnInit, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-  @Input() text?: string;
+  @Input() result?: string;
+  @Input() operationSymbol?: string;
+  @Input() value?: string;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  clearResult() {
-    this.text = '';
-    console.log("result.component.clearResult()");
-  }
-  addValues() {
-    ;
-  }
-  substractValues() {
-    ;
+    this.result = 'hello!';
   }
 
 }
